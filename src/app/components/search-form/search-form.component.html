@@ -1,0 +1,29 @@
+<div class="container-fluid p-5 px-md-0">
+  <div class="row text-center d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md-8">
+      <h3 class=" mb-2">Movies search</h3>
+
+      <p class="text-wrap">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur assumenda numquam ex
+        similique reiciendis perspiciatis sed facilis sapiente rem quasi</p>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row d-md-flex justify-content-md-center align-items-md-center">
+      <form [formGroup]="searchForm" (ngSubmit)="search()" class=" col-12 col-md-8">
+        <div class=" row row-cols-2 row-cols-md-1">
+          <div class="col-12 col-md-6 pb-3 p-md-0 gx-2">
+            <input class="form-control" type="text" formControlName="name" required="true">
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn button btn-primary me-3">Search</button>
+            <button type="button" (click)="reset()" class="btn button btn-warning">Reset</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
