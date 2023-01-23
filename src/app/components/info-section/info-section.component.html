@@ -1,0 +1,27 @@
+<div class="container-fluid p-5 py-md-3 px-md-5" *ngIf='movie.imdbID'>
+  <div class=" row row-col-2">
+    <div class=" col-12 col-md-9 pe-3">
+      <h3 class=" mb-3">{{movie.Title}}</h3>
+
+      <p class="text-wrap">{{movie.Plot}}</p>
+
+      <div class="container-fluid  mb-3 d-flex justify-content-start align-items-center">
+        <h5 class=" me-3"><strong>Actors</strong></h5>
+        <p class=" text-wrap">{{movie.Actors}}</p>
+      </div>
+
+      <div class="container-fluid  mb-3 d-flex justify-content-start align-items-center">
+        <h5 class=" me-2"><strong>Review</strong></h5>
+        <ngb-rating [rate]="movie.imdbRating" [readonly]="true"></ngb-rating>
+      </div>
+
+      <div class="col-12 mb-5">
+        <button type="button" class="btn btn-outline-danger w-25" (click)="emitMovieId(movie.imdbID)">Favorite</button>
+      </div>
+    </div>
+
+    <div class=" col-12 col-md-3 d-flex justify-content-center align-items-center">
+      <img [src]="movie.Poster" class="img-fluid img" alt="searched movie poster">
+    </div>
+  </div>
+</div>
