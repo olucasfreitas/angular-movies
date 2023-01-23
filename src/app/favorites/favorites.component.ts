@@ -24,6 +24,7 @@ export class FavoritesComponent implements OnInit {
     this.favorites$.subscribe((ids) => {
       this.getMovies(ids);
     });
+    this.loading = false;
   }
 
   getMovies(ids: string[]): void {
